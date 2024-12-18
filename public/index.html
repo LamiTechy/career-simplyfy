@@ -105,13 +105,251 @@
       .man:hover{
         color: greenyellow;
       }
+      @media (max-width: 1024px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+
+  .nav-list2 li {
+    margin-bottom: 10px;
+  }
+
+  .nav-list2 li a {
+    color: #333;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+  }
+
+  .hamburger span:last-child {
+    margin-bottom: 0;
+  }
+
+  .close-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    display: none;
+  }
+
+  .nav-list2.show {
+    display: block;
+  }
+
+  .hamburger.show span {
+    background-color: #fff;
+  }
+
+  .hamburger.show span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.show span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.show span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 1024px) {
+/* existing media query styles */
+
+/* updated styles */
+.nav-bar {
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
+width: 100%;
+}
+
+.nav-start img {
+width: 100px;
+height: 50px;
+}
+
+.nav-list2 {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #fff;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.nav-list2 li {
+margin-bottom: 10px;
+}
+
+.nav-list2 li a {
+color: #333;
+}
+
+.button2 {
+width: 100%;
+margin-top: 10px;
+}
+
+.hamburger {
+display: block;
+position: relative;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+
+.close-btn {
+display: none;
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 20px;
+cursor: pointer;
+color: #000;
+display: none;
+}
+}
+@media (max-width: 1024px) {
+  .button2 {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+.nav-bar {
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
+width: 100%;
+}
+
+.nav-start img {
+width: 100px;
+height: 50px;
+}
+
+.nav-list2 {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #fff;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.nav-list2 li {
+margin-bottom: 10px;
+}
+
+.nav-list2 li a {
+color: #333;
+}
+
+.button2 {
+display: none;
+}
+
+.hamburger {
+display: block;
+position: relative;
+width: 30px;
+height: 30px;
+cursor: pointer;
+}
+}
+
+
+@media (max-width: 1024px) {
+.nav-bar {
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+width: 100%;
+}
+
+.nav-start img {
+width: 100px;
+height: 50px;
+}
+
+.nav-list2 {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #fff;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.nav-list2 li {
+margin-bottom: 10px;
+}
+
+.nav-list2 li a {
+color: #333;
+}
+
+.button2 {
+display: none;
+}
+
+.hamburger {
+display: block;
+position: relative;
+width: 30px;
+height: 30px;
+cursor: pointer;
+margin-left: auto;
+}
+}
+
+
+
 </style>
 <body>
     <nav class="nav-bar">
         <div class="nav-start">
             <img width="200px" height="100px" src=".\asset\WhatsApp_Image_2024-12-17_at_19.21.01_8a912e94-removebg-preview2.png" alt="" />
         </div>
-        
+    
+      
         <ul class="nav-list2">
             <a href="" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">Home </li></a>
             <a href="" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">About </li></a>
@@ -122,7 +360,29 @@
               >Get Started
               <i class="fa-solid fa-arrow-right" style="color: white"></i
             ></span>
-          </button>
+          </button> 
+          <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
     </nav>
+    <script>
+     const hamburger = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav-list2');
+const closeBtn = document.querySelector('.close-btn');
+
+hamburger.addEventListener('click', () => {
+navList.classList.toggle('show');
+hamburger.classList.toggle('show');
+closeBtn.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+navList.classList.remove('show');
+hamburger.classList.remove('show');
+closeBtn.style.display = 'none';
+});
+    </script>
 </body>
 </html>
