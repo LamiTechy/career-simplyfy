@@ -38,12 +38,12 @@
         width: 1330px;
         position: relative;
         /* top: 20px; */
-        right: 20px;
-        /* margin-right: 10px; */
-        left: 20px;
+        /* right: 20px; */
+        margin: auto;
+        /* left: 20px; */
 
         border-radius: 15px;
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
 
       }
       .nav-list2 {
@@ -434,13 +434,73 @@ margin-right: auto;
       .sect-img {
         /* clip-path: circle(50% at 50% 50%); */
         display: flex;
-        /* margin-left: 150px; */
+        margin-left: 60px;
         background-image: url();
       }
 
+      /* .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      } */
+      /* .nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+} */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  height: 90px; /* added height property */
+}
+.sections {
+  margin-top: 150px; /* added margin-top property */
+}
+
+
+
+@media (max-width: 1024px) {
+  .sections {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .sect-img {
+    order: 1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .sect-img img {
+    width: 90%;
+    height: auto;
+  }
+  .sect-text {
+    order: 2;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
 
 </style>
-<body class="sect">
+<body class="sect" id="home">
     <nav class="nav-bar">
         <div class="nav-start">
             <img width="200px" height="100px" src=".\asset\WhatsApp_Image_2024-12-17_at_19.21.01_8a912e94-removebg-preview2.png" alt="" />
@@ -448,7 +508,7 @@ margin-right: auto;
     
       
         <ul class="nav-list2">
-            <a href="" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">Home </li></a>
+            <a href="#home" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">Home </li></a>
             <a href="" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">About </li></a>
             <a href="" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">Services</li></a>
         </ul>
