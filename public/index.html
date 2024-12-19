@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="./index2.html">
 </head>
 <style>
+     @font-face {
+        font-family: "Raleway";
+        src: url(./asset/Merriweather-BoldItalic.ttf);
+      }
     .nav-bar {
         display: flex;
         align-items: center;
@@ -32,7 +36,7 @@
         /* border: 2px solid red; */
         width: 1330px;
         position: relative;
-        top: 20px;
+        /* top: 20px; */
         right: 20px;
         /* margin-right: 10px; */
         left: 20px;
@@ -48,6 +52,7 @@
         color:black;
         margin: 0;
         position: relative;
+        font-family: Raleway;
       }
       .nav-list2 > li {
         position: relative;
@@ -86,6 +91,47 @@
       }
 
       .button2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        width: 100%;
+        height: inherit;
+        border-radius: inherit;
+        background: linear-gradient(
+          82.3deg,
+          rgb(93, 233, 105) 10.8%,
+          rgb(17, 90, 14) 94.3%
+        );
+        transition: all 0.475s;
+      }
+      .button {
+        position: relative;
+        overflow: hidden;
+        height: 3rem;
+        padding: 0 2rem;
+        border-radius: 1.5rem;
+        background: #3d3a4e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: Raleway;
+        /* top: 70px; */
+        left: 150px;
+        margin-top: 20px;
+      }
+      .button:hover::before {
+        transform: scaleX(1);
+      }
+
+      .button-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .button::before {
         content: "";
         position: absolute;
         top: 0;
@@ -350,12 +396,50 @@ margin-right: auto;
 }
 }
 
+.sect{
+  /* margin-top: auto; */
+  position: relative;
+  /* top: 20px; */
+  background-color: rgba(201, 191, 191, 0.425);
 
+}
+.mujeeb{
+  position: relative;
+  top: 100px;
+}
+.men{
+  /* border: 2px solid brown; */
+  width: 250px;
+  border-radius: 10px;
+  background-color: rgb(171, 226, 171);
+  font-family: Raleway;
+  color: rgb(173, 197, 137);
+}
+.sections {
+        display: flex;
+        gap: 150px;
+        margin-top: 30px;
+        margin-left: 150px;
+        font-family: Raleway;
+        color: rgba(80, 116, 43, 0.815);
+      }
 
+      .sect-text {
+        width: 400px;
+        justify-content: flex-start;
+        font-family: Raleway;
+      }
+
+      .sect-img {
+        /* clip-path: circle(50% at 50% 50%); */
+        display: flex;
+        /* margin-left: 150px; */
+        background-image: url();
+      }
 
 
 </style>
-<body>
+<body class="sect">
     <nav class="nav-bar">
         <div class="nav-start">
             <img width="200px" height="100px" src=".\asset\WhatsApp_Image_2024-12-17_at_19.21.01_8a912e94-removebg-preview2.png" alt="" />
@@ -379,6 +463,25 @@ margin-right: auto;
           <span></span>
         </div>
     </nav>
+    <main class="sections">
+      
+      <div class="sect-text">
+          <p style="font-size: 30px;" class="me">Hey There</p>
+          <small>Do You Wish To Take Your Career To Another level?</small><br><br>
+          <span style="font-size: 20px;" class="me">Career Simplify Has Got You Covered</span><br><br>
+          <small>We are dedicated to empowering individuals in their professional journeys by providing comprehensive career consulting services, including personalized resume and cover letter review to showcase unique strengths, and expert interview preparation to build confidence and ensure success. Whether you're seeking your first job, transitioning careers, or aiming for a leadership role, our mission is to help you unlock your full potential and achieve your professional goals with tailored support and strategic guidance every step of the way.</small>
+      </div>
+      <div class="sect-img">
+        <img width="400" height="400" src="./asset/circle-1.png" alt="">
+    </div>
+    
+  </main> <button class="button">
+      <span class="button-content"
+        >Get Started
+        <i class="fa-solid fa-arrow-right" style="color: white"></i
+      ></span>
+    </button>
+    
     <script>
      const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list2');
