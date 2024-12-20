@@ -123,6 +123,21 @@
         left: 150px;
         margin-top: 20px;
       }
+      .button3 {
+        position: relative;
+        overflow: hidden;
+        height: 3rem;
+        padding: 0 2rem;
+        border-radius: 1.5rem;
+        background: #3d3a4e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: Raleway;
+        /* top: 70px; */
+        /* left: 150px; */
+        margin-top: 20px;
+      }
       .button:hover::before {
         transform: scaleX(1);
       }
@@ -133,6 +148,32 @@
       }
 
       .button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        width: 100%;
+        height: inherit;
+        border-radius: inherit;
+        background: linear-gradient(
+          82.3deg,
+          rgb(93, 233, 105) 10.8%,
+          rgb(17, 90, 14) 94.3%
+        );
+        transition: all 0.475s;
+      }
+      .button3:hover::before {
+        transform: scaleX(1);
+      }
+
+      .button-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .button3::before {
         content: "";
         position: absolute;
         top: 0;
@@ -424,6 +465,27 @@ margin-right: auto;
         font-family: Raleway;
         color: rgba(80, 116, 43, 0.815);
       }
+.sections2 {
+        display: flex;
+        /* gap: 20px; */
+        margin-top: 30px;
+       
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Raleway;
+        color: rgba(80, 116, 43, 0.815);
+      }
+      .fas{
+        position: relative;
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+      .mate{
+        position: relative;
+        top: 30px;
+        left: 10px;
+      }
 
       .sect-text {
         width: 400px;
@@ -478,7 +540,7 @@ margin-right: auto;
   }
   .sect-img {
     order: 1;
-    width: 100%;
+    width: 90%;
     margin-bottom: 20px;
   }
   .sect-img img {
@@ -491,6 +553,85 @@ margin-right: auto;
     text-align: center;
   }
 }
+.closing{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  margin-top: 20px;
+  border-radius: 0.75rem;
+  background-color: white;
+  width: 880px;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 600px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+  0 2px 4px -2px rgba(0,0,0,.1);
+}
+
+.header {
+  position: relative;
+  background-clip: border-box;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.75rem;
+  /* background-color: rgb(33 150 243); */
+  /* box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4); */
+  /* height: 14rem; */
+}
+
+.info {
+  border: none;
+  padding: 1.5rem;
+  /* text-align: center; */
+}
+
+.title {
+  color: rgb(38 50 56);
+  letter-spacing: 0;
+  line-height: 1.375;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  padding: 0.75rem;
+  border: 1px solid rgb(236 239 241);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 140, 255, 0.082);
+}
+
+.tag {
+  font-weight: 300;
+  font-size: .75rem;
+  display: block;
+}
+
+.action {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 6px -1px rgba(33,150,243,.4),0 2px 4px -2px rgba(33,150,243,.4);
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(33 150 243);
+  border-radius: 0.5rem;
+}
+
+
 
 
 
@@ -510,7 +651,7 @@ margin-right: auto;
         <ul class="nav-list2">
             <a href="#home" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">Home </li></a>
             <a href="" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">About </li></a>
-            <a href="" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">Services</li></a>
+            <a href="#services" style="text-decoration: none; color: black; font-size: 15px;"><li class="man">Services</li></a>
         </ul>
         <button class="button2">
             <span class="button-content"
@@ -542,6 +683,57 @@ margin-right: auto;
         <i class="fa-solid fa-arrow-right" style="color: white"></i
       ></span>
     </button>
+    <center><ul style="font-family: Raleway; font-size: 40px;" id="services">Services</ul></center>
+  <div class="sections2">
+    <div class="card">
+      <div style="display: flex;">
+      <div><i class="fas fa-user-tie" style="font-size: 50px; color: rgba(157, 182, 119, 0.527);"></i>
+      </div><h4 class="mate">🌟 Feeling Stuck in Your Career? Let’s Find Your Path Forward! 🌟</h4></div><br>
+      <div>
+        <ul>In my personalized Career Advice consultation, you’ll gain:
+        </ul>
+        <ul style="list-style: none;">
+        <li>✔️ Clarity: We’ll uncover your strengths, passions, and opportunities to align them with your ideal career.
+        </li>
+        <li>✔️ Actionable Steps: Together, we’ll create a customized roadmap to help you achieve your career goals.
+        </li>
+        <li>✔️ Expert Guidance: Benefit from years of experience and proven strategies to tackle challenges like interviews, networking, and skill-building.
+        </li>
+        <li>✔️ Confidence: Walk away with renewed motivation and the tools to take control of your career.
+        </li>
+        </ul>
+        <p class="closing">Whether you're just starting, considering a change, or aiming to grow in your current role, this consultation is designed to empower you and set you up for success. <br><br>
+          <span>Don’t wait for clarity to come to you <b>—let’s create it together!</b> 🚀</span><br><br>
+          <button class="button3">
+      <span class="button-content"
+        >Book @ 35.50 USD For 30 Mins
+        <i class="fa-solid fa-arrow-right" style="color: white"></i
+      ></span>
+    </button>
+        </p>
+      </div>
+    </div>
+    
+    <div class="card">
+
+    </div>
+  
+</div>
+  <div class="sections2">
+    <div class="card">
+
+    </div>
+    <div class="card">
+
+    </div>
+    
+  </div>
+   
+  
+  
+    
+   </div>
+    
     
     <script>
      const hamburger = document.querySelector('.hamburger');
